@@ -79,8 +79,8 @@ def test_gpu():
         u_kln[k,:,0:N_k[k]] = u_kln[k,:,indices].T
     # Compute free energy differences and statistical uncertainties
     mbar = MBAR(u_kln, N_k)
-    [DeltaF_ij, dDeltaF_ij, Theta_ij] = mbar.getFreeEnergyDifferences()
-    print(f"{DeltaF_ij=} {dDeltaF_ij=} {Theta_ij=}")
+    #[DeltaF_ij, dDeltaF_ij, Theta_ij] = mbar.getFreeEnergyDifferences()
+    #print(f"{DeltaF_ij=} {dDeltaF_ij=} {Theta_ij=}")
 
 if __name__ == "__main__":
     test_gpu()
