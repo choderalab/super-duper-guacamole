@@ -40,8 +40,11 @@ def test_gpu():
 
     # Create a context
     integrator = openmm.LangevinIntegrator(temperature, collision_rate, timestep)
-    platform = Platform.getPlatformByName("CUDA")
-    context = openmm.Context(system, integrator, platform)
+    if os.getenv('TEST_MODE') == "CPU":
+        context = openmm.Context(system, integrator)
+    else:
+        platform = Platform.getPlatformByName("CUDA")
+        context = openmm.Context(system, integrator, platform)
     context.setPositions(positions)
 
     # Minimize energy
