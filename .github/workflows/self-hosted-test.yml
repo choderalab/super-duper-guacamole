@@ -1,4 +1,4 @@
-name: do-the-job
+name: self-hosted-test
 on: pull_request
 jobs:
   start-runner:
