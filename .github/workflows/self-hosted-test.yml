@@ -20,8 +20,8 @@ jobs:
         with:
           mode: start
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          ec2-image-id: ami-02af0d1672951924b
-          ec2-instance-type: t4g.micro
+          ec2-image-id: ami-07216ecab4ca1877b
+          ec2-instance-type: t2.micro
           subnet-id: subnet-0e82552b8c708a999
           security-group-id: sg-0589e74ec03965add
           # iam-role-name: self-hosted-runner # optional, requires additional permissions
