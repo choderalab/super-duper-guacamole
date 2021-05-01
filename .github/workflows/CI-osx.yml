@@ -1,0 +1,25 @@
+name: MacMini
+
+on:
+  push:
+
+jobs:
+  build-and-test:
+    defaults:
+      run:
+        shell: /usr/bin/arch -arch ${{ matrix.runner }} /bin/bash -l {0} 
+    runs-on: macOS
+    env:
+      DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
+      NSUnbufferedIO: YES 
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [arm64e, x86_64]
+    timeout-minutes: 20
+    steps:
+    - uses: actions/checkout@v2.3.1
+    - run: |
+          conda info
+          conda list
+          pytest -v
