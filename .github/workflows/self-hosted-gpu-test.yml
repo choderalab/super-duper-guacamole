@@ -1,4 +1,4 @@
-name: self-hosted-test
+name: self-hosted-gpu-test
 on: pull_request
 jobs:
   start-runner:
@@ -43,8 +43,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: conda-incubator/setup-miniconda@v2
         with:
-          installer-url: https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-aarch64.sh
-          activate-environment: arm-runner-test
+          installer-url: https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
+          activate-environment: test
           environment-file: environment.yml
           auto-activate-base: false
       - run: |
