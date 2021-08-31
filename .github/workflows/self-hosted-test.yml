@@ -44,7 +44,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with:
           installer-url: https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-aarch64.sh
-          activate-environment: gpu-runner-test
+          activate-environment: arm-runner-test
           environment-file: environment.yml
           auto-activate-base: false
       - run: |
