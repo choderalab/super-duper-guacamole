@@ -20,13 +20,13 @@ jobs:
     steps:
        - uses: actions/checkout@v2.3.1
        - uses: conda-incubator/setup-miniconda@v2
-        with:
-          python-version: 3.9
-          mamba-version: "*"
-          channels: conda-forge,defaults
-          channel-priority: true
-          activate-environment: test
-          environment-file: test_env.yaml
+         with:
+           python-version: 3.9
+           mamba-version: "*"
+           channels: conda-forge,defaults
+           channel-priority: true
+           activate-environment: test
+           environment-file: test_env.yaml
       - shell: bash -l {0}
         run: |
           conda info
