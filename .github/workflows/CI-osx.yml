@@ -23,8 +23,7 @@ jobs:
          with:
            python-version: 3.9
            installer-url: https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-${{ matrix.runner }}.sh
-           channels: conda-forge,defaults
-           channel-priority: true
+           channel-priority: strict
            activate-environment: test
            environment-file: test_env.yaml
        - shell: bash -l {0}
