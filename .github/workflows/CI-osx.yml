@@ -27,12 +27,12 @@ jobs:
            channel-priority: true
            activate-environment: test
            environment-file: test_env.yaml
-      - shell: bash -l {0}
-        run: |
-          conda info
-          conda list
-          conda config --show-sources
-          conda config --show
-          printenv | sort
-          arch
-          uname
+       - shell: bash -l {0}
+         run: |
+           conda info
+           conda list
+           conda config --show-sources
+           conda config --show
+           printenv | sort
+           arch
+           uname
