@@ -26,7 +26,7 @@ jobs:
            channel-priority: strict
            activate-environment: test
            environment-file: test_env.yaml
-         run: |
+       - run: |
            conda info
            conda list
            conda config --show-sources
