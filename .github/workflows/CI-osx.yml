@@ -22,11 +22,10 @@ jobs:
        - uses: conda-incubator/setup-miniconda@v2
          with:
            python-version: 3.9
-           installer-url: https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-${{ matrix.runner }}.sh
+           installer-url: https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-MacOSX-${{ matrix.runner }}.sh
            channel-priority: strict
            activate-environment: test
            environment-file: test_env.yaml
-       - shell: bash -l {0}
          run: |
            conda info
            conda list
